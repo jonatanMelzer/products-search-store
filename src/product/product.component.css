@@ -1,0 +1,22 @@
+mat-slider {
+  width: 50%;
+}
+
+label {
+  font-weight: bold;
+}
+
+.container {
+  background-image: linear-gradient(to left, #5ce1e6 0%, #8c52ff 80%);
+  padding: 1em;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  height: 50%;
+  display: inline-block;
+}
+
+.products {
+  color: black;
+  font-size: large;
+}

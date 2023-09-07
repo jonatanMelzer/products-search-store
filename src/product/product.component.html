@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Product Search</h1>
+  <label>Price Range: </label>
+  <mat-slider min="0" max="1500" discrete>
+    <input
+      matSliderStartThumb
+      [value]="minPrice()"
+      (valueChange)="updateRange($event, maxPrice())"
+    />
+    <input
+      matSliderEndThumb
+      [value]="maxPrice()"
+      (valueChange)="updateRange(minPrice(), $event)"
+    />
+  </mat-slider>
+
+  <div class="products">
+    <div *ngFor="let p of products()">
+      <div>{{ p.name }}: {{ p.price }}$</div>
+    </div>
+  </div>
+</div>
