@@ -6,7 +6,7 @@ import { ProductService } from './product.service';
 const initialState = {
   products: [] as ProductModel[],
   minPrice: 0,
-  maxPrice: 0,
+  maxPrice: 1500,
 };
 
 @Injectable({ providedIn: 'root' })
@@ -18,7 +18,6 @@ export class ProductStore extends signalStore(withState(initialState)) {
       minPrice: minPrice,
       maxPrice: maxPrice,
     });
-    console.log(minPrice, maxPrice);
   }
 
   async load(): Promise<void> {
