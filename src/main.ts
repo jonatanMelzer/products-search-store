@@ -1,5 +1,5 @@
 import 'zone.js/dist/zone';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { ProductComponent } from './product/product.component';
@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
   selector: 'my-app',
   standalone: true,
   imports: [CommonModule, ProductComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<app-product></app-product>`,
 })
 export class App {}

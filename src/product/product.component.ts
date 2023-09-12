@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, effect, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
 import { MatSliderModule } from '@angular/material/slider';
 import { ProductStore } from './product-store.service';
 
@@ -8,6 +8,7 @@ import { ProductStore } from './product-store.service';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css'],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, MatSliderModule],
 })
 export class ProductComponent {
